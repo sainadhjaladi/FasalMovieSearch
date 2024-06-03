@@ -1,6 +1,6 @@
 # Movie Library Web Application
 
-This is a Django-based movie library web application with user authentication, movie search, and playlist functionality. Users can sign up, log in, search for movies using the OMDB API, and create lists of movies (similar to YouTube playlists). Lists can be public or private.
+This is a Django-based movie library web application with user authentication, movie search, and playlist functionality. Users can sign up, log in, search for movies using the OMDB API, and create lists of movies.
 
 ## Features
 
