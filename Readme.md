@@ -14,15 +14,13 @@ This is a Django-based movie library web application with user authentication, m
    - Add movies to personalized lists.
 
 3. **Movie Lists**:
-   - Users can create and manage multiple lists of movies.
-   - Lists can be marked as public or private.
+   - Users can manage lists of movies.
+   - Lists can be marked as public.
    - Public lists can be shared with anyone via a link.
-   - Private lists are visible only to the creator.
 
 ## Application Links
 
-- [Hosted Application](#) (Replace this with your hosted application link)
-- [Source Code Repository](#) (Replace this with the link to your code repository, e.g., GitHub)
+- [Hosted Application](https://bit.ly/fasalmoviesearch)
 
 ## Local Setup Instructions
 
@@ -33,6 +31,7 @@ To run this application locally, follow these steps:
 - Python 3.x
 - Django
 - pip (Python package installer)
+- MySQL
 
 ### Installation
 
@@ -53,17 +52,33 @@ To run this application locally, follow these steps:
     pip install -r requirements.txt
     ```
 
-4. **Set Up the Database**:
+4. **Set Up MySQL Database**:
+    - Create a MySQL database.
+    - Update the `DATABASES` setting in `settings.py` with your database details:
+    ```python
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'your_database_name',
+            'USER': 'your_database_user',
+            'PASSWORD': 'your_database_password',
+            'HOST': 'your_database_host',
+            'PORT': 'your_database_port',
+        }
+    }
+    ```
+
+5. **Set Up the Database**:
     ```bash
     python manage.py migrate
     ```
 
-5. **Create a Superuser**:
+6. **Create a Superuser**:
     ```bash
     python manage.py createsuperuser
     ```
 
-6. **Run the Server**:
+7. **Run the Server**:
     ```bash
     python manage.py runserver
     ```
@@ -110,5 +125,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For any inquiries or feedback, please contact [Your Name] at [Your Email].
-
+For any inquiries or feedback, please contact J. Sainadh at sainadhjaladi01@gmail.com.
